@@ -24,11 +24,12 @@ const Navbar = () => {
 <img src={search} alt=''/>
 <p>Children</p>
 <img src={bellIcon} alt=''/>
-</div>
 <div className="navbar-profile">
 <img src={profileImg} alt=''/>
 <img src={carateIcon} alt=''/>
 </div>
+</div>
+
     </div>
   )
 }
