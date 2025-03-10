@@ -21,11 +21,11 @@ const Navbar = () => {
 
 </div>
 <div className="navbar-right">
-<img src={search} alt=''/>
+<img src={search} alt='' className='icons'/>
 <p>Children</p>
-<img src={bellIcon} alt=''/>
+<img src={bellIcon} alt='' className='icons'/>
 <div className="navbar-profile">
-<img src={profileImg} alt=''/>
+<img src={profileImg} alt='' className='profile'/>
 <img src={carateIcon} alt=''/>
 </div>
 </div>
