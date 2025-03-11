@@ -19,8 +19,8 @@ const Home = () => {
               officia blanditiis voluptas illum quibusdam inventore quidem eius fugit.
             </p>
             <div className="hero-btns">
-              <button><img className='btn' src={play_icon}/>Play</button>
-              <button><img className='btn dark-btn' src={info_icon}/>More Info</button>
+              <button className='btn'><img  src={play_icon}/>Play</button>
+              <button  className='btn dark-btn' ><img src={info_icon}/>More Info</button>
             </div>
           </div>
         </div>
