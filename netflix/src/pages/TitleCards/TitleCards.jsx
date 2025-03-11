@@ -1,6 +1,6 @@
 import React from 'react'
 import cards_data from '../../assets/cards/Cards_data'
-
+import './TitleCards.css'
 const TitleCards = () => {
   return (
    <div className="titlecards">
