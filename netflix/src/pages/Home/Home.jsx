@@ -3,6 +3,8 @@ import Navbar from '../Navbar/Navbar'
 import './Home.css'
 import hero_barner from '../../assets/hero_banner.jpg'
 import hero_title from '../../assets/hero_title.png'
+import play_icon from '../../assets/play_icon.png'
+import info_icon from '../../assets/info_icon.png'
 
 const Home = () => {
   return (
@@ -16,6 +18,10 @@ const Home = () => {
               laborum, possimus repellendus excepturi, veritatis ipsa autem dolorum incidunt aliquam 
               officia blanditiis voluptas illum quibusdam inventore quidem eius fugit.
             </p>
+            <div className="hero-btns">
+              <button><img className='btn' src={play_icon}/>Play</button>
+              <button><img className='btn dark-btn' src={info_icon}/>More Info</button>
+            </div>
           </div>
         </div>
     </div>
