@@ -9,10 +9,11 @@ const Login = () => {
       <div className="loginForm">
         <h1>{signState}</h1>
         <form>
-          <input type='text' name='name' placeholder='Enter your name..'/>
+          {signState === "Sign Up" ? <input type='text' name='name' placeholder='Enter your name..'/> : <></>}
+
           <input type='email' name='email' placeholder='Enter your email ....'/>
           <input type='password' name='password' placeholder='Enter your password'/>
-          <button>Sign Up</button>
+          <button>{signState}</button>
           <div className="formHelp">
             <div className="remember">
                  <input type='checkbox'/>
@@ -23,8 +24,9 @@ const Login = () => {
 
         </form>
         <div className="form-switch">
-            <p>New to Netflix? <span>Sign Up Now</span></p>
-            <p>Already have account? <span>Sign In now</span></p>
+          {signState === "Sign In" ?  <p>New to Netflix? <span>Sign Up Now</span></p> 
+          :  <p>Already have account? <span>Sign In now</span></p>}
+           
            </div>
       </div>
     </div>
