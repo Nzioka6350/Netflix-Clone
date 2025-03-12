@@ -18,10 +18,13 @@ const Login = () => {
                  <label htmlFor=''>Remember Me</label>
             </div>
             <p>Need Help?</p>
-           
           </div>
 
         </form>
+        <div className="form-switch">
+            <p>New to Netflix? <span>Sign Up Now</span></p>
+            <p>Already have account? <span>Sign In now</span></p>
+           </div>
       </div>
     </div>
   )
