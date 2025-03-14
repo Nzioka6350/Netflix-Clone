@@ -60,7 +60,6 @@ You can deploy your app using Firebase Hosting:
 npm run build
 firebase deploy
 ```
-
 ## License
 This project is open-source and available under the MIT License.
 
