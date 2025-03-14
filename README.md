@@ -20,7 +20,7 @@ A fully functional Netflix Clone built with React and Firebase, featuring user a
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/netflix-clone.git
+   git clone https://github.com/nZIOKA6350/netflix-clone.git
    cd netflix-clone
    ```
 2. Install dependencies:
