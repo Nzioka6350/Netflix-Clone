@@ -62,7 +62,6 @@ firebase deploy
 ```
 ## License
 This project is open-source and available under the MIT License.
-
 ## Contact
 For questions or issues, contact [your email or GitHub profile].
 
