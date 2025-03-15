@@ -19,7 +19,7 @@ const db = getFirestore(app)
 
 //User sign up function
 
-const signup = async (name,email,password) =>{
+export const signup = async (name,email,password) =>{
     try{
        const res = await createUserWithEmailAndPassword(auth,email,password);
        const user = res.user;
@@ -37,7 +37,7 @@ const signup = async (name,email,password) =>{
 
 }
 
-const login = async(email,password)=>{
+export const login = async(email,password)=>{
     try{
 
         await signInWithEmailAndPassword(auth,email,password)
@@ -47,6 +47,6 @@ const login = async(email,password)=>{
     }
 }
 
-const logout = () =>{
+export const logout = () =>{
     signOut(auth)
 }

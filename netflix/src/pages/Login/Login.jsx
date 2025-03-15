@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import logo from '../../assets/logo.png'
 import './Login.css'
+import { login, signup } from '../../../firebase'
 const Login = () => {
   const [signState,setSignState] = useState("Sign In")
   return (
