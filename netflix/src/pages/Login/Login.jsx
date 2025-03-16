@@ -5,7 +5,8 @@ import { login, signup } from '../../../firebase'
 const Login = () => {
   const [signState,setSignState] = useState("Sign In")
   const [name, setName] =useState("")
-  
+  const [email,setEmail] = useState("")
+  const [password,setPassword] = useState("")
   return (
     
     <div className='login'>
