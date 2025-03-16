@@ -4,8 +4,10 @@ import './Login.css'
 import { login, signup } from '../../../firebase'
 const Login = () => {
   const [signState,setSignState] = useState("Sign In")
+  const [name, setName] =useState("")
+  
   return (
-
+    
     <div className='login'>
       <img src={logo} className='login-logo' alt=''/>
       <div className="loginForm">
@@ -23,6 +25,7 @@ const Login = () => {
             </div>
             <p>Need Help?</p>
           </div>
+
         </form>
         <div className="form-switch">
           {signState === "Sign In"
