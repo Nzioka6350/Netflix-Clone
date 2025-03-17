@@ -27,7 +27,6 @@ const Login = () => {
             </div>
             <p>Need Help?</p>
           </div>
-
         </form>
         <div className="form-switch">
           {signState === "Sign In"
