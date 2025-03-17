@@ -16,7 +16,6 @@ const Login = () => {
         <h1>{signState}</h1>  
         <form>
           {signState === "Sign Up" ? <input type='text' name='name' placeholder='Enter your name..'/> : <></>}
-
           <input type='email' name='email' placeholder='Enter your email ....'/>
           <input type='password' name='password' placeholder='Enter your password'/>
           <button>{signState}</button>
