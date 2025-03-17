@@ -13,8 +13,7 @@ const Login = () => {
     <div className='login'>
       <img src={logo} className='login-logo' alt=''/>
       <div className="loginForm">
-        <h1>{signState}</h1>
-        
+        <h1>{signState}</h1>  
         <form>
           {signState === "Sign Up" ? <input type='text' name='name' placeholder='Enter your name..'/> : <></>}
 
