@@ -8,6 +8,15 @@ const Login = () => {
   const [email,setEmail] = useState("")
   const [password,setPassword] = useState("")
 
+  const userAuth = async(event)=>{
+    event.preventDefault()
+    if(signState === "Sign In"){
+      await login(email,password)
+    }else{
+      await signup(name,email,password)
+    }
+  }
+
   return (
     
     <div className='login'>
@@ -15,10 +24,16 @@ const Login = () => {
       <div className="loginForm">
         <h1>{signState}</h1>  
         <form>
-          {signState === "Sign Up" ? <input type='text' name='name' placeholder='Enter your name..'/> : <></>}
-          <input type='email' name='email' placeholder='Enter your email ....'/>
-          <input type='password' name='password' placeholder='Enter your password'/>
-          <button>{signState}</button>
+          {signState === "Sign Up" ? <input type='text' name='name' placeholder='Enter your name..' value={name} onChange={(e)=>{
+            setName(e.target.value)
+          }}/> : <></>}
+          <input type='email' name='email' placeholder='Enter your email ....' value={email} onChange={(e)=>{
+            setEmail(e.target.value)
+          }}/>
+          <input type='password' name='password' placeholder='Enter your password' value={password} onChange={()=>{
+            setPassword(e.target.value)
+          }}/>
+          <button onClick={userAuth} type='submit'>{signState}</button>
           <div className="formHelp">
             <div className="remember">
                  <input type='checkbox'/>
@@ -26,7 +41,7 @@ const Login = () => {
             </div>
             <p>Need Help?</p>
           </div>
-          
+
         </form>
         <div className="form-switch">
           {signState === "Sign In"
