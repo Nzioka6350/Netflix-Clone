@@ -2,6 +2,7 @@
 import { getApp, initializeApp } from "firebase/app";
 import { addDoc, collection, getFirestore} from "firebase/firestore";
 import {createUserWithEmailAndPassword,signInWithEmailAndPassword, getAuth, signOut} from "firebase/auth";
+import { toast, ToastContainer } from "react-toastify";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDZwiEVQX6zUokVpHIJdh8omdtMF4JOB44",
@@ -17,36 +18,44 @@ const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 const db = getFirestore(app)
 
-//User sign up function
+// User sign up function
+export const signup = async (name, email, password) => {
+    try {
+        const res = await createUserWithEmailAndPassword(auth, email, password);
+        const user = res.user;
 
-export const signup = async (name,email,password) =>{
-    try{
-       const res = await createUserWithEmailAndPassword(auth,email,password);
-       const user = res.user;
-       await addDoc(collection(db,"user"),{
-        uid: user.uid,
-        name,
-        authProvider: "local",
-        email
-       });
+        await addDoc(collection(db, "user"), {
+            uid: user.uid,
+            name,
+            authProvider: "local",
+            email
+        });
 
-    }catch(e){
-        console.log(e);
-        alert(e)
+        // ✅ Show success toast
+        toast.success("Account created successfully! Please log in.");
+        
+        // ✅ Log out user so they go to the login page
+        await signOut(auth);
+
+    } catch (e) {
+        console.error(e);
+        // ❌ Show error toast
+        toast.error(e.message);
     }
+};
 
-}
-
-export const login = async(email,password)=>{
-    try{
-
-        await signInWithEmailAndPassword(auth,email,password)
-    }catch(e){
-        console.log(e);
-        alert(e)
+// User login function
+export const login = async (email, password) => {
+    try {
+        await signInWithEmailAndPassword(auth, email, password);
+        toast.success("Logged in successfully!");
+    } catch (e) {
+        console.error(e);
+        toast.error(e.message);
     }
-}
+};
 
 export const logout = () =>{
     signOut(auth)
+    toast.success("Logged out successfully")
 }
