@@ -30,7 +30,7 @@ const Login = () => {
           <input type='email' name='email' placeholder='Enter your email ....' value={email} onChange={(e)=>{
             setEmail(e.target.value)
           }}/>
-          <input type='password' name='password' placeholder='Enter your password' value={password} onChange={()=>{
+          <input type='password' name='password' placeholder='Enter your password' value={password} onChange={(e)=>{
             setPassword(e.target.value)
           }}/>
           <button onClick={userAuth} type='submit'>{signState}</button>
