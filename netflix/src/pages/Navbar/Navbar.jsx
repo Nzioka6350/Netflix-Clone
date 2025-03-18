@@ -5,6 +5,7 @@ import search from '../../assets/search_icon.svg'
 import bellIcon from '../../assets/bell_icon.svg'
 import profileImg from '../../assets/profile_img.png'
 import carateIcon from '../../assets/caret_icon.svg'
+import { logout } from '../../../firebase'
 const Navbar = () => {
   return (
     <div className='navbar'>
@@ -28,7 +29,9 @@ const Navbar = () => {
 <img src={profileImg} alt='' className='profile'/>
 <img src={carateIcon} alt=''/>
 <div className="dropdown">
-  <p>Sign Out</p>
+  <p onClick={()=>{
+    logout()
+  }}>Sign Out</p>
 </div>
 </div>
 </div>
