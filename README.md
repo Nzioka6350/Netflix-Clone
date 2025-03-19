@@ -1,67 +1,12 @@
-# Netflix Clone
+# React + Vite
 
-A fully functional Netflix Clone built with React and Firebase, featuring user authentication, movie browsing, and a sleek UI similar to the original Netflix platform.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Features
-- User authentication (Sign up, Login, Logout) using Firebase Authentication.
-- Movie database integration using TMDB API.
-- Dynamic movie categories (Trending, Top Rated, etc.).
-- Responsive UI with React and Tailwind CSS.
-- Firebase Firestore for user-specific data.
-- Secure routing using React Router.
+Currently, two official plugins are available:
 
-## Technologies Used
-- **React** - Frontend framework.
-- **Firebase** - Backend authentication and database.
-- **Tailwind CSS** - Styling.
-- **TMDB API** - Movie data.
-- **React Router** - Navigation.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/nZIOKA6350/netflix-clone.git
-   cd netflix-clone
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Set up Firebase:
-   - Create a Firebase project.
-   - Enable Authentication (Email/Password sign-in).
-   - Create a Firestore database.
-   - Get Firebase configuration and add it to `.env`:
-     ```env
-     REACT_APP_FIREBASE_API_KEY=your_api_key
-     REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
-     REACT_APP_FIREBASE_PROJECT_ID=your_project_id
-     REACT_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
-     REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
-     REACT_APP_FIREBASE_APP_ID=your_app_id
-     ```
-4. Start the development server:
-   ```bash
-   npm start
-   ```
+## Expanding the ESLint configuration
 
-## Usage
-- Sign up or log in to access content.
-- Browse movie categories.
-- Click on a movie to view details.
-- Logout when done.
-
-## Screenshots
-(Include screenshots of your app here)
-
-## Deployment
-You can deploy your app using Firebase Hosting:
-```bash
-npm run build
-firebase deploy
-```
-## License
-This project is open-source and available under the MIT License.
-## Contact
-For questions or issues, contact [your email or GitHub profile].
-
+If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
