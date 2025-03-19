@@ -2,14 +2,17 @@ import React, { useState } from 'react'
 import logo from '../../assets/logo.png'
 import './Login.css'
 import { login, signup } from '../../../firebase'
+import netflix_spinner from './assets/netflix_spinner.gif';
 const Login = () => {
   const [signState,setSignState] = useState("Sign In")
   const [name, setName] =useState("")
   const [email,setEmail] = useState("")
   const [password,setPassword] = useState("")
+  const [loader, setLoader] = useState(false);
 
   const userAuth = async(event)=>{
     event.preventDefault()
+    setLoader(true)
     if(signState === "Sign In"){
       await login(email,password)
     }else{
